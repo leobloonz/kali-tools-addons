@@ -33,3 +33,8 @@ https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/
 
 ## sec-lists
 sudo apt install seclists
+
+## robotsdisallowed
+git clone https://github.com/danielmiessler/RobotsDisallowed.git
+
+sudo mv RobotsDisallowed/ /usr/share/wordlists/
