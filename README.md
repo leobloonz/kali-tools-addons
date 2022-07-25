@@ -11,13 +11,18 @@ git clone https://github.com/drwetter/testssl.sh.git
 
 ## google-chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 ## firefox
 https://www.mozilla.org/en-US/firefox/download/thanks/
+
 tar xjf firefox-*.tar.bz2
+
 sudo mv firefox /opt
+
 sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+
 sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/share/applications
 
 ## foxy-proxy
