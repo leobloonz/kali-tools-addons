@@ -41,9 +41,15 @@ sudo mv RobotsDisallowed/ /usr/share/wordlists/
 
 ## java se 18 
 sudo apt install -y libc6-x32 libc6-i386
+
 https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html
+
 wget https://download.oracle.com/java/18/archive/jdk-18.0.2.1_linux-x64_bin.deb
+
 sudo dpkg -i jdk-18.0.2.1_linux-x64_bin.deb
+
 sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-18/bin/java 1
+
 sudo update-alternatives --config java
+
 java -version
