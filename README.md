@@ -6,6 +6,12 @@ sudo apt update && sudo apt-get dist-upgrade -y
 ## ngrok
 curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
 
+# agregar a .zshrc
+function remoto {
+port=$1;ip=$(ip a | grep '/24' | cut -d ' ' -f 6 | cut -d '/' -f 1);echo "Server HTTP Python ONLINE [ CTRL+C to BRAKE]: $ip:$port"; python3 -m http.server $port 2>/dev/null | ngrok http $port
+}
+
+
 ## testssl.sh
 git clone https://github.com/drwetter/testssl.sh.git
 
